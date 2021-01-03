@@ -1,5 +1,13 @@
 # Program for the Inland Revenue Department (IRD) named Integrated Tax System(ITS)
 # Taking user input
+def choice():
+    customers_number = int(print("Enter how many customers data you want to enter: "))
+    customers = []
+    while customers_number > 0:
+        customers.append(person())
+        customers_number -= 1
+
+
 def person():
     print("""
                             Inland Revenue Department
@@ -7,7 +15,7 @@ def person():
     """)
     name = input("Enter your name: ")
     address = input("Address: ")
-    married_status = input("Enter 'Y' for Married and 'N' for Unmarried: ").upper()
+    married_status = input("Enter 'Y' for Married and 'N' for Unmarried: ")
     pan_no = int(input("Enter your PAN No.: "))
     monthly_income = int(input("Enter your monthly income: "))
     annual_income = monthly_income * 12
@@ -73,15 +81,10 @@ temp = 0
 
 # Displaying the output in the specified format
 def main(person):
-    print(person)
-
-    for x in person:
-        if x == 'Y':
-            temp = married(person.annual_income)
-        elif x == 'N':
-            temp = unmarried(person.annual_income)
-        else:
-            print("Please enter a valid married status.")
+    if person.married_status == 'Y':
+        temporary = married(person.annual_income)
+    else:
+        temporary = unmarried(person.annual_income)
 
     print("""
                             Inland Revenue Department
@@ -92,8 +95,8 @@ def main(person):
     PAN No: {2}             FY: 2020/2021       Married Status: {3}
     Tax Payee {0} with PAN {2} falls under (1 + {4})% Tax salb.
     {0} (PAN {2}) to pay tax to government is [Rs.] = {5}
-    """.format(person.name, person.address, person.pan_no, person.married_status, str(temp[0]),
-               str(temp[1])))
+    """.format(person.name, person.address, person.pan_no, person.married_status, str(temporary[0]),
+               str(temporary[1])))
 
 
 if __name__ == '__main__':
