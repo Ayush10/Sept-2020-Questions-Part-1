@@ -14,7 +14,7 @@ bike_cc = int(input("Customer Bike in cc: "))
 phone_number = input("Phone No.: ")
 
 # Checking Condition
-if bike_cc >= 125:
+if bike_cc <= 125:
     tax_amount = 2800
 elif 126 < bike_cc <= 160:
     tax_amount = 4500

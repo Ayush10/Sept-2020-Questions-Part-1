@@ -13,7 +13,7 @@ bike_cc = int(input("Customer Bike in cc: "))
 phone_number = input("Phone No.: ")
 
 # Checking Condition
-if bike_cc >= 125:
+if bike_cc <= 125:
     tax_amount = 2800
 elif 126 < bike_cc <= 160:
     tax_amount = 4500
@@ -29,7 +29,7 @@ else:
 # Displaying the output
 print("""
                     Department of Transport Management
-                            Banseswor, Kathmandu
+                            Baneswor, Kathmandu
                     Welcome to DOTM Bike Renewal System
                             Fiscal Year 2020/21
 Customer Name: {0}                     Address: {1}
