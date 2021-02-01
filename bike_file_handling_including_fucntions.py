@@ -11,6 +11,18 @@ def customer_input():
     address = input("Customer Address: ")
     bike_cc = int(input("Customer Bike in cc: "))
     phone_number = input("Phone No.: ")
+    f = open('bike_file_handling.txt', 'a')
+    f.write("""
+                        Department of Transport Management
+                                Baneswor, Kathmandu
+                        Welcome to DOTM Bike Renewal System
+                                Fiscal Year 2020/21\n\n
+    """)
+    f.write("Customer Name: {0}\n".format(name))
+    f.write("\tCustomer Address: {0}\n".format(address))
+    f.write("\tCustomer Bike in cc: {0}\n".format(str(bike_cc)))
+    f.write("\tPhone No.: {0}\n\n\n\n".format(phone_number))
+    f.close()
     tax_amount = checking_condition(bike_cc)
     main(name, address, bike_cc, phone_number, tax_amount)
 
@@ -46,17 +58,18 @@ def main(name, address, bike_cc, phone_number, tax_amount):
     {0} with {2} cc Bike has to pay Tax of [Rs.] = {4}
     """.format(name, address, str(bike_cc), phone_number, str(tax_amount)))
 
+    f = open('bike_file_handling.txt', 'a')
+    f.write("""
+                        Department of Transport Management
+                                Baneswor, Kathmandu
+                        Welcome to DOTM Bike Renewal System
+                                Fiscal Year 2020/21
+    Customer Name: {0}                     Address: {1}
+    Customer Bike[cc]: {2}                 Phone No.: {3}
+    {0} with {2} cc Bike has to pay Tax of [Rs.] = {4}
+    """.format(name, address, str(bike_cc), phone_number, str(tax_amount)))
+    f.close()
+
 
 customer_input()
 
-# f = open('bike.txt', 'w')
-# f.write("""
-#                     Department of Transport Management
-#                             Baneswor, Kathmandu
-#                     Welcome to DOTM Bike Renewal System
-#                             Fiscal Year 2020/21
-# Customer Name: {0}                     Address: {1}
-# Customer Bike[cc]: {2}                 Phone No.: {3}
-# {0} with {2} cc Bike has to pay Tax of [Rs.] = {4}
-# """.format(name, address, str(bike_cc), phone_number, str(tax_amount)))
-# f.close()
