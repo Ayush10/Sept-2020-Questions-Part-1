@@ -2,7 +2,7 @@
 # Taking user input
 print("""
                     Department of Transport Management
-                            Banseswor, Kathmandu
+                            Baneswor, Kathmandu
                     Welcome to DOTM Bike Renewal System
                             Fiscal Year 2020/21
 """)
@@ -28,7 +28,7 @@ else:
 # Displaying the output
 print("""
                     Department of Transport Management
-                            Banseswor, Kathmandu
+                            Baneswor, Kathmandu
                     Welcome to DOTM Bike Renewal System
                             Fiscal Year 2020/21
 Customer Name: {0}                  Address: {1}
