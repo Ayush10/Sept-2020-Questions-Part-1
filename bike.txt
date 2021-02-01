@@ -1,0 +1,8 @@
+
+                    Department of Transport Management
+                            Banseswor, Kathmandu
+                    Welcome to DOTM Bike Renewal System
+                            Fiscal Year 2020/21
+Customer Name: Ayush Ojha                     Address: Balaju
+Customer Bike[cc]: 1800                       Phone No.: 9868552642
+Ayush Ojha with 1800 cc Bike has to pay Tax of [Rs.] = 2800
